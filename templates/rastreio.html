@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Rastreamento do Pedido</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 30px;
+            background-color: #f2f2f2;
+        }
+        .container {
+            background-color: #fff;
+            border-radius: 8px;
+            padding: 30px;
+            max-width: 500px;
+            margin: auto;
+            box-shadow: 0 0 15px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+        }
+        .status {
+            margin-top: 30px;
+        }
+        .status p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .codigo {
+            font-weight: bold;
+            color: #2b7a78;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Rastreamento do Pedido</h2>
+        <p class="codigo">Código de rastreio: {{ codigo }}</p>
+        <div class="status">
+            {% for item in status %}
+                <p>{{ item }}</p>
+            {% endfor %}
+        </div>
+    </div>
+</body>
+</html>
